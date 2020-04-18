@@ -1,5 +1,3 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib tagdir="/WEB-INF/tags" prefix="tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,11 +9,15 @@
 </head>
 <body>
 
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	<%@ taglib tagdir="/WEB-INF/tags" prefix="tags" %>
+
 	<c:import url="cabecalho.jsp"></c:import>
 	
 	<h1>Adiciona Contatos</h1>
 	<hr/><br/>
-	<form action="adicionaContato">
+	<form action="mvc">
+		<input type="hidden" name="logica" value="ContatoLogic">
 		Nome: <input type="text" name="nome"/><br/>
 		Email: <input type="text" name="email"/><br/>
 		Endereço: <input type="text" name="endereco"/><br/>

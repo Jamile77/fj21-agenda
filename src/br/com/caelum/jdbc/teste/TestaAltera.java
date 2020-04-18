@@ -13,10 +13,10 @@ public class TestaAltera {
 		Contato contato = new Contato();
 		
 		contato.setDataNascimento(Calendar.getInstance());
-		contato.setEmail("sandra@caelum.com.br");
-		contato.setNome("Sandra");
+		contato.setEmail("j@caelum.com.br");
+		contato.setNome("j");
 		contato.setEndereco("paripe");
-		contato.setId(1);
+		contato.setId(10);
 		
 		dao.altera(contato);
 		
