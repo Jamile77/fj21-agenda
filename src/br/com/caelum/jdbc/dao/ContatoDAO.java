@@ -16,6 +16,10 @@ public class ContatoDAO {
 
 	private Connection connection;
 	
+	public ContatoDAO(Connection connection) {
+		this.connection =  connection;
+	}
+	
 	public ContatoDAO() {
 		try {
 			this.connection =  new ConnectionFactory().getConnection();

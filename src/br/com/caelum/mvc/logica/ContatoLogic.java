@@ -1,5 +1,6 @@
 package br.com.caelum.mvc.logica;
 
+import java.sql.Connection;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -30,7 +31,8 @@ public class ContatoLogic implements Logica {
 			throw new Exception("Erro de conversão da data", e);
 		}
 
-		ContatoDAO dao = new ContatoDAO();
+		Connection connection = (Connection) req.getAttribute("conexao");
+		ContatoDAO dao = new ContatoDAO(connection);
 		Contato contato = new Contato();
 		contato.setNome(nome);
 		contato.setEmail(email);
